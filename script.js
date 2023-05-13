@@ -71,5 +71,14 @@ function game() {
         playerCounter=0;
     };
     //I change the condition from 3 to 1 so that this game only play one round
-}
+};
+
+const rockButton = document.querySelector(".rock");
+rockButton.addEventListener("click", () => playRound("Rock", getComputerChoice()));
+
+const paperButton = document.querySelector(".paper");
+paperButton.addEventListener("click", () => playRound("Paper", getComputerChoice()));
+
+const scissorsButton = document.querySelector(".scissors");
+scissorsButton.addEventListener("click", () => playRound("Scissors", getComputerChoice()));
 
