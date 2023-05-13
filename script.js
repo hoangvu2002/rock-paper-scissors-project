@@ -23,15 +23,7 @@ const computerResult = document.createElement("p");
 computerResult.textContent = `${computerCounter}`;
 div.appendChild(computerResult);
 
-if (computerCounter===5) {
-    div.textContent = "Computer is the winner";
-    computerCounter=0;
-    playerCounter=0;
-} else if (playerCounter===5) {
-    div.textContent="You are the winner";
-    computerCounter=0;
-    playerCounter=0;
-};
+
 
 
 function getComputerChoice() {
@@ -86,6 +78,15 @@ function playRound(playerSelection, computerSelection) {
         };
     } else {
     alert("You didn't enter a valid input");
+    };
+    if (computerCounter===5) {
+        div.textContent = "Computer is the winner";
+        computerCounter=0;
+        playerCounter=0;
+    } else if (playerCounter===5) {
+        div.textContent="You are the winner";
+        computerCounter=0;
+        playerCounter=0;
     };
     //if (true) {
     //playerSelection = prompt("Enter your choice: ");
