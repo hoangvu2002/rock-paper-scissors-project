@@ -10,7 +10,7 @@ let computerCounter=0;
 //let computerSelection = getComputerChoice();
 
 function playRound(playerSelection, computerSelection) {
-    if (playerSelection.slice(0,1).toUpperCase()+playerSelection.slice(1)==="Rock") {
+    if (playerSelection.slice(0,1).toUpperCase()+playerSelection.slice(1).toLowerCase()==="Rock") {
         if (computerSelection ==="Rock") {
             alert("Draw");
         } else if (computerSelection ==="Paper") {
@@ -20,7 +20,7 @@ function playRound(playerSelection, computerSelection) {
             alert("You won");
             playerCounter=++playerCounter;
         };
-    } else if (playerSelection.slice(0,1).toUpperCase()+playerSelection.slice(1)==="Paper") {
+    } else if (playerSelection.slice(0,1).toUpperCase()+playerSelection.slice(1).toLowerCase()==="Paper") {
         if (computerSelection ==="Paper") {
             alert("Draw");
         } else if (computerSelection ==="Scissors") {
@@ -30,7 +30,7 @@ function playRound(playerSelection, computerSelection) {
             alert("You won");
             playerCounter=++playerCounter;
         };
-    } else if (playerSelection.slice(0,1).toUpperCase()+playerSelection.slice(1)==="Scissors") {
+    } else if (playerSelection.slice(0,1).toUpperCase()+playerSelection.slice(1).toLowerCase()==="Scissors") {
         if (computerSelection ==="Scissors") {
             alert("Draw");
         } else if (computerSelection ==="Rock") {
@@ -61,14 +61,15 @@ function game() {
 
     playRound(playerSelection,computerSelection);
 
-    if (computerCounter===3) {
+    if (computerCounter===1) {
         alert("Computer is the winner");
         computerCounter=0;
         playerCounter=0;
-    } else if (playerCounter===3) {
+    } else if (playerCounter===1) {
         alert("You are the winner");
         computerCounter=0;
         playerCounter=0;
     };
+    //I change the condition from 3 to 1 so that this game only play one round
 }
 
